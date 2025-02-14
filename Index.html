@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendador de Películas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 WebMovies</h1>
+        <form id="movieForm">
+            <div class="question">
+                <label for="genre">¿Qué género te gusta?</label>
+                <select id="genre">
+                    <option value="accion">Acción</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="drama">Drama</option>
+                    <option value="ciencia_ficcion">Ciencia Ficción</option>
+                    <option value="animacion">Animación</option>
+                    <option value="terror">Terror</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="mood">¿Cómo te sientes hoy?</label>
+                <select id="mood">
+                    <option value="feliz">Feliz</option>
+                    <option value="triste">Triste</option>
+                    <option value="emocionado">Emocionado</option>
+                    <option value="relajado">Relajado</option>
+                    <option value="asustado">Asustado</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="duration">¿Cuánto tiempo tienes?</label>
+                <select id="duration">
+                    <option value="corta">Menos de 2 horas</option>
+                    <option value="media">Entre 2 y 3 horas</option>
+                    <option value="larga">Más de 3 horas</option>
+                </select>
+            </div>
+            <button type="submit">Recomendar Película</button>
+        </form>
+    </div>
+
+    <!-- Modal de recomendación -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="moviePoster" src="" alt="Poster de la película">
+            <h2 id="movieTitle"></h2>
+            <p id="movieSynopsis"></p>
+            <p id="durationAlert"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
